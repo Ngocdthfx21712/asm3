@@ -27,7 +27,11 @@
 
 		const hiddenInfo = (id,e) => {
 			if(e.value =='ViewMore'){
-				document.getElementById(id).style.display = 'block'
+				if(id === 'content4'){
+					document.getElementById(id).style.display = 'flex'
+				} else {
+					document.getElementById(id).style.display = 'block'
+				}
 				e.value ='ViewLess'
 			} else {
 				document.getElementById(id).style.display = 'none'
@@ -41,9 +45,6 @@
 		}
 		.job-box-flex:hover .handle-button{
 			display: block;
-		}
-		#content4 .job-skill{
-			width: 100%;
 		}
 	</style>
 </head>
